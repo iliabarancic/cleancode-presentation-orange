@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/league.css" id="theme">
-    <link rel="stylesheet" href="css/theme/slides.css.css" id="slides">
+    <link rel="stylesheet" href="css/theme/slides.css" id="slides">
 
     <!-- Theme used for syntax highlighting of code -->
     <!--<link rel="stylesheet" href="lib/css/zenburn.css">-->
@@ -54,22 +54,88 @@
 
         <section>
             <h2>What is Clean Code?</h2>
-            <h4>... a (very) brief introduction</h4>
+            <h4 class="fragment">... a (very) brief introduction</h4>
         </section>
 
         <section>
             <div>
                 <h3>the only valid metric for clean code</h3>
-                <img alt="wtf" src="images/wtf.jpg" class="plain"
-                     style="text-align: center; box-shadow: 0 0 0 ; border: 0px; margin: 0"/>
+                <img alt="wtf" src="images/wtf.jpg" class="plain fragment"/>
             </div>
             </p>
         </section>
+
+        <section>
+            <h2>What is Clean Code?</h2>
+        </section>
+
+        <section>
+            <h3>What is Clean Code -
+                <mark> Ward Cunningham</mark>
+            </h3>
+
+            <img alt="bob" src="images/wardcunningham.png" class="plain"
+                 style="float:right"/>
+            <div class="quote-parent">
+                <div class="quote emph">“ You know you are working on clean code
+                    when each routine you
+                    read
+                    <mark>turns out to be
+                        pretty much what you
+                        expected
+                    </mark>
+                    ”
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>What is Clean Code -
+                <mark> Micheal Feathers</mark>
+            </h3>
+
+            <img alt="bob" src="images/michalfeathers.png" class="plain"
+                 style="float:right"/>
+            <div class="quote-parent">
+                <div class="quote emph">“ Clean code always
+                    looks like it was written
+                    by
+                    <mark>someone who cares</mark>
+                    ”
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Why Clean Code?</h2>
+        </section>
+
+        <section>
+            <h3>Why clean code -
+                <mark> Uncle Bob</mark>
+            </h3>
+
+            <img alt="bob" src="images/unclebob.png" class="plain"
+                 style="float:right"/>
+            <div class="quote-parent">
+                <div class="quote emph">“ Indeed, the ratio of time spent
+                    <mark>reading versus writing</mark>
+                    is well over
+                    <mark>10 to
+                        1
+                    </mark>
+                    .
+                    We
+                    are
+                    constantly reading old code as part of the effort to write new code ”
+                </div>
+            </div>
+        </section>
+
         <section>
             <div>
                 <h3>Java Code</h3>
-                <pre>
-                <code data-trim data-noescape class="java">
+                <pre><code data-trim data-noescape class="java">
                     int a = 5;
                     int b = 6;
                     System.out.println("This is the result: " + (a+b));
@@ -83,11 +149,7 @@
                      System.out.println("This is the result: " + (a+b));
                      System.out.println("This is the result: " + (a+b));
                      System.out.println("This is the result: " + (a+b));
-                     System.out.println("This is the result: " + (a+b));
-                     System.out.println("This is the result: " + (a+b));
-                     System.out.println("This is the result: " + (a+b));
-                </code>
-                </pre>
+                </code></pre>
             </div>
             </p>
         </section>
@@ -482,6 +544,7 @@ Reveal.addEventListener( 'customevent', function() {
         progress: true,
         history: true,
         center: true,
+        slideNumber: true,
 
         transition: 'slide', // none/fade/slide/convex/concave/zoom
 

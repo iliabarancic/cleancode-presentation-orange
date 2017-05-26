@@ -4,17 +4,21 @@
     font-size: 0.5em !important;
     font-style: italic !important;
 }
+
 .emph {
-    background-color: rgb(80,65,26);
+    background-color: rgb(80, 65, 26);
     color: white;
     padding: 0 10px !important;
+    font-style: italic;
 }
+
 .imagelayer {
     width: 40% !important;
     margin-left: 30% !important;
     margin-top: -3px !important;
     border: 3px solid black !important;
 }
+
 .imagelayerid {
     position: absolute !important;
     margin-left: -190px !important;
@@ -24,7 +28,16 @@
 
 img {
     text-align: center !important;
-    box-shadow: 0 0 0 !important; 
-    border: 0 !important; 
+    box-shadow: 0 0 0 !important;
+    border: 0 !important;
     margin: 0 !important;
+}
+
+.quote {
+    margin: 50px !important;
+    background-color: #00AAAA;
+    padding: 50px !important;
+    vertical-align: middle !important;
+    font-size: 30px !important;
+    font-style: italic !important;
 }
