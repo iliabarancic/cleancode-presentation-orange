@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
 
@@ -76,8 +75,48 @@ public class Example {
     }
 
     public List<Cell> getFlaggedCells2() {
-       return gameBoard.getCells().stream().filter(Cell::isFlagged).collect(toList());
+        return gameBoard.getCells().stream().filter(Cell::isFlagged).collect(toList());
     }
+
+    private class Person {
+
+        private String firstName;
+        private String lastName;
+
+        public String getFirstName() {
+            return firstName;
+        }
+
+        public void setFirstName(String firstName) {
+            this.firstName = firstName;
+        }
+
+        public String getLastName() {
+            return lastName;
+        }
+
+        public void setLastName(String lastName) {
+            this.lastName = lastName;
+        }
+    }
+
+
+    private List<Person> createCDS() {
+        List<Person> cds = new ArrayList<>();
+
+        Person yunus = new Person();
+        yunus.setFirstName("Yunus");
+        yunus.setLastName("Durmus");
+        cds.add(yunus);
+
+        Person timo = new Person();
+        timo.setFirstName("Timo");
+        timo.setLastName("Krauss");
+        cds.add(timo);
+
+        return cds;
+    }
+
 
 
 }
