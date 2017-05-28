@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>reveal.js – The HTML Presentation Framework</title>
+    <title>Clean Code</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -172,50 +172,161 @@
                 </li>
                 <li class="fragment">
                     <mark>Reduces technical debt</mark>
-                    without costs.
+                    without costs
                 </li>
                 <li class="fragment">Attract better and
                     <mark>passionate developers</mark>
                 </li>
             </ol>
+        </section>
+
+        <section>
+            <h3>Why clean code -
+                <mark> Bug fix costs</mark>
+            </h3>
+            <img src="images/bugfix%20costs.jpg" class="plain" height="500"/>
         </section>
 
         <section>
             <h3>How can I learn Clean Code?
             </h3>
+            <p>
+                <img alt="bob" src="images/cleancode_bookcover.jpg" height="500"/>
+                <img alt="bob" src="images/thesoftwarecraftsman_bookcover.jpg" height="500"/>
+            </p>
+            <p>
+                <small><a href="http://www.cleancodedeveloper.de">www.cleancodedeveloper.de</a> - Sorry guys, just
+                    german
+                </small>
+            </p>
+        </section>
+
+        <section>
+            <h3>
+                <mark>&nbsp;CCD&nbsp;</mark>
+                is splitted into:
+            </h3>
             <ol>
-                <li class="fragment">It is (almost) free</li>
-                <li class="fragment">It is a key
-                    <mark>success factor</mark>
-                    to your software projects
-                </li>
-                <li class="fragment">
-                    <mark>Reduces technical debt</mark>
-                    without costs.
-                </li>
-                <li class="fragment">Attract better and
-                    <mark>passionate developers</mark>
-                </li>
+                <li class="fragment">Pricinples</li>
+                <li class="fragment">Practices</li>
             </ol>
         </section>
 
         <section>
+            <h3>Clean Code
+                <mark>Practices</mark>
+                - some examples
+            </h3>
+            <ol>
+                <li class="fragment">Boyscout rule - leave it cleaner as it was before</li>
+                <li class="fragment">Visit Meetups and Fares</li>
+                <li class="fragment">Pair Programming</li>
+                <li class="fragment">Use easy refactoring patterns</li>
+                <li class="fragment">Reflect Daily</li>
+                <li class="fragment">Read, read, read</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Lets start with some
+                <mark>advices</mark>
+                and
+                <mark>principles</mark>
+            </h3>
+            <ul style="list-style: none">
+                <li>
+                    <small>advices: tipps from the book or me</small>
+                </li>
+                <li>
+                    <small>principles: from CCD (which is derived from the book)</small>
+                </li>
+            </ul>
+        </section>
+
+        <section>
             <div>
-                <h3>Java Code</h3>
-                <pre><code data-trim data-noescape class="java">
-                    int a = 5;
-                    int b = 6;
-                    System.out.println("This is the result: " + (a+b));
+                <h4>Advice -
+                    <mark>&nbsp;Meaningful names&nbsp;</mark>
+                </h4>
+                <pre><code data-noescape class="java">
+    public List<int[]> getThem() {
+    List<int[]> list1 = new ArrayList<int[]>();
+        for (int[] x : theList)
+        if (x[0] == 4)
+            list1.add(x);
+        return list1;
+    }
+                </code></pre>
+            </div>
+        </section>
 
-                     System.out.println("This is the result: " + (a+b));
+        <section>
+            <div>
+                <h4>Advice -
+                    <mark>&nbsp;Meaningful names&nbsp;</mark>
+                </h4>
+                <pre><code data-noescape class="java">
+    public List&lt;Cell&gt; getFlaggedCells() {
+    List&lt;Cell&gt; flaggedCells = new ArrayList<Cell>();
+        for (Cell cell : gameBoard)
+            if (cell.isFlagged())
+                flaggedCells.add(cell);
+        return flaggedCells;
+    }
+                </code></pre>
+            </div>
+        </section>
 
-                     System.out.println("This is the result: " + (a+b));
+        <section>
+            <div>
+                <h4>Advice -
+                    <mark>&nbsp;Meaningful names - Shorter&nbsp;</mark>
+                </h4>
+                <pre style="width:1050px"><code style="width:1050px" data-noescape class="java">
+    public List&lt;Cell&gt; getFlaggedCells() {
+       return board.getCells().stream().filter(Cell::isFlagged).collect(toList());
+    }
+                </code></pre>
+            </div>
+        </section>
 
-                     System.out.println("This is the result: " + (a+b));
-                     System.out.println("This is the result: " + (a+b));
-                     System.out.println("This is the result: " + (a+b));
-                     System.out.println("This is the result: " + (a+b));
-                     System.out.println("This is the result: " + (a+b));
+        <section>
+            <div>
+                <h4>Advice -
+                    <mark>&nbsp;Avoid noise comments&nbsp;</mark>
+                </h4>
+                <pre><code data-noescape class="java">
+    /** The day of the month. */
+    private int dayOfMonth;
+    /**
+     * Returns the day of the month.
+     * @return the day of the month.
+     */
+    public int getDayOfMonth() {
+        return dayOfMonth;
+    }
+                </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h4>Advice -
+                    <mark>&nbsp;Avoid scary noise&nbsp;</mark>
+                </h4>
+                <pre><code data-noescape class="java">
+    /**
+     * The name.
+     */
+    private String name;
+    /**
+     * The version.
+     */
+    private String version;
+    /**
+     * The licenceName.
+     */
+    private String licenceName;
                 </code></pre>
             </div>
         </section>

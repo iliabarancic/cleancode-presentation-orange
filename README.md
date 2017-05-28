@@ -1059,7 +1059,7 @@ Reveal.initialize({
 	// other options...
 
 	multiplex: {
-		// Example values. To generate your own, see the socket.io server instructions.
+		java.Example
 		secret: null, // null so the clients do not have control of the master presentation
 		id: '1ea875674b17ca76', // id, obtained from socket.io server
 		url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
@@ -1122,7 +1122,7 @@ Reveal.initialize({
 	// other options...
 
 	multiplex: {
-		// Example values. To generate your own, see the socket.io server instructions.
+		java.Example
 		secret: '13652805320794272084', // Obtained from the socket.io server. Gives this (the master) control of the presentation
 		id: '1ea875674b17ca76', // Obtained from socket.io server
 		url: 'example.com:80' // Location of your socket.io server
