@@ -118,11 +118,11 @@
             </div>
         </section>
 
-        <section>
+        <section data-background-color="#353550" data-background-transition="slide">
             <h2>Why Clean Code?</h2>
         </section>
 
-        <section>
+        <section data-background-color="#353550">
             <h3>Why clean code -
                 <mark>&nbsp; Uncle Bob&nbsp;</mark>
             </h3>
@@ -144,7 +144,7 @@
             </div>
         </section>
 
-        <section>
+        <section data-background-color="#353550">
             <h3>Why clean code -
                 <mark>&nbsp;Developers Perspective&nbsp;</mark>
             </h3>
@@ -170,7 +170,7 @@
             </ol>
         </section>
 
-        <section>
+        <section data-background-color="#353550">
             <h3>Why clean code -
                 <mark>&nbsp; Employers Perspective&nbsp;</mark>
             </h3>
@@ -190,14 +190,14 @@
             </ol>
         </section>
 
-        <section>
+        <section data-background-color="#353550">
             <h3>Why clean code -
                 <mark>&nbsp;Bug fix costs&nbsp;</mark>
             </h3>
             <img src="images/bugfix%20costs.jpg" class="plain" height="500"/>
         </section>
 
-        <section>
+        <section data-background-color="#353550">
             <h3>How can I learn Clean Code?
             </h3>
             <p>
@@ -211,9 +211,9 @@
             </p>
         </section>
 
-        <section>
+        <section data-background-color="#353550">
             <h3>
-                <mark>&nbsp;CCD&nbsp;</mark>
+                <mark>&nbsp;CCD Intiative&nbsp;</mark>
                 is splitted into:
             </h3>
             <ol>
@@ -222,7 +222,7 @@
             </ol>
         </section>
 
-        <section data-background-color="#333333" data-background-transition="slide">
+        <section data-background-color="#2D3F4F" data-background-transition="slide">
             <h3>Clean Code
                 <mark>&nbsp;Practices&nbsp;</mark>
                 - some examples
@@ -237,7 +237,7 @@
             </ul>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <h3>Lets start with some
                 <mark>&nbsp;advices&nbsp;</mark>
                 and
@@ -253,7 +253,7 @@
             </ul>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <h3>Principles -
                 <mark>&nbsp;KISS&nbsp;</mark>
                 and
@@ -277,7 +277,7 @@
             </ul>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <div>
                 <h4>Advice -
                     <mark>&nbsp;Meaningful names&nbsp;</mark>
@@ -294,7 +294,7 @@
             </div>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <div>
                 <h4>Advice -
                     <mark>&nbsp;Meaningful names&nbsp;</mark>
@@ -311,7 +311,7 @@
             </div>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <div>
                 <h4>Advice -
                     <mark>&nbsp;Meaningful names - Shorter&nbsp;</mark>
@@ -324,7 +324,24 @@
             </div>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
+            <div>
+                <h4>Priciniple of
+                    <mark>&nbsp;Least astonishment&nbsp;</mark>
+                </h4>
+                <pre class="fragment" style="width:1050px"><code style="width:1050px" data-noescape class="java">
+        public String getDeviceName() {
+            if(name.equals("Jessica Jones"))  {
+                setName("Lucas Cage"); //WTF
+                callDatabase(name); //WTF
+            }
+            return name;
+        }
+                </code></pre>
+            </div>
+        </section>
+
+        <section data-background-color="#2D3F4F">
             <div>
                 <h4>Advice -
                     <mark>&nbsp;Avoid noise comments&nbsp;</mark>
@@ -343,7 +360,7 @@
             </div>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <div>
                 <h4>Advice -
                     <mark>&nbsp;Avoid scary noise&nbsp;</mark>
@@ -366,7 +383,7 @@
         </section>
 
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <div>
                 <h4>Principle -
                     <mark>&nbsp;DRY&nbsp;</mark>
@@ -397,7 +414,7 @@
             </div>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <div>
                 <h4>Principle -
                     <mark>&nbsp;DRY&nbsp;</mark>
@@ -418,7 +435,7 @@
             </div>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <div>
                 <h4>Advice -
                     <mark>&nbsp;Write short classes and functions&nbsp;</mark>
@@ -438,19 +455,17 @@
                 </small>
             </div>
         </section>
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <div>
                 <h4>Advice -
                     <mark>&nbsp;The best function has no parameters&nbsp;</mark>
                 </h4>
                 <ul style="list-style: none">
                     <li class="fragment">
-                        <mark>&nbsp;Number of function parameters&nbsp;</mark>
-                        : <= 3
+                        Number of function parameters: <= 3
                     </li>
                     <li class="fragment">
-                        <mark>&nbsp;Best number of paramters&nbsp;</mark>
-                        : 0
+                        Best number of function parameters: = 0
                     </li>
                 </ul>
                 <pre class="fragment"><code data-noescape class="java">
@@ -472,7 +487,7 @@
             </div>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <div>
                 <h4>Advice - Function
                     <mark>&nbsp;The best function has no parameters&nbsp;</mark>
@@ -491,11 +506,15 @@
                         <mark>&nbsp;Additional TIPP:&nbsp;</mark>
                         : Parameters are part of method signature. saveReading(Reading) is duplicate
                     </small>
+                    <small class="fragment">
+                        <mark>&nbsp;Additional TIPP:&nbsp;</mark>
+                        : a non void function should never touch its parameters
+                    </small>
                 </div>
             </div>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <div>
                 <h4>Principle -
                     <mark>&nbsp;SRP&nbsp;</mark>
@@ -524,7 +543,7 @@
             </div>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <mark>&nbsp;SLA&nbsp;</mark>
             - Single level of abstraction
             <pre class="fragment"><code data-noescape class="java">
@@ -552,7 +571,7 @@
             </p>
         </section>
 
-        <section data-background-color="#3D5F7F">
+        <section data-background-color="#2D3F4F">
             <h4>Principle -
                 <mark>&nbsp;SLA&nbsp;</mark>
                 - Single level of abstraction
@@ -575,25 +594,66 @@
         firstName = "Bernhard";
         lastName = "Kern";
     }
-    person = createPersion(firstName, lastName);
+    person = createPerson(firstName, lastName);
                 </code></pre>
         </section>
+
+        <section data-background-color="#2D3F4F">
+
+            <h3>Summary</h3>
+
+            <ul>
+                <li class="fragment">Not tested code is
+                    <mark>&nbsp;legacy&nbsp;</mark>
+                </li>
+                <li class="fragment">
+                    <mark>&nbsp;Deleting code&nbsp;</mark>
+                    is positive
+                </li>
+                <li class="fragment">Commenting code is 90% unncessary</li>
+                <li class="fragment">Share
+                    <mark>&nbsp;coding conventions&nbsp;</mark>
+                    in your team
+                </li>
+                <li class="fragment">Know shortcuts of
+                    <mark>&nbsp;Refactorings&nbsp;</mark>
+                    (Extract method, parameter, variable)
+                </li>
+                <li class="fragment">Know your
+                    <mark>&nbsp;language and tools&nbsp;</mark>
+                    - Java 8 features, IDE shortcuts
+                </li>
+                <li class="fragment">Some
+                    <mark>&nbsp;Principles and Practices&nbsp;</mark>
+                    <ul>
+                        <li>Boyscout rule - Leave the code cleaner as you found it before</li>
+                        <li>KISS and YAGNI - Keep it simple/stupid, You ain´t gonna need it</li>
+                        <li>DRY - Don´t repeat yourself (Some exceptions)</li>
+                        <li>SRP - Single resposibility priciple</li>
+                        <li>SLA - Single level of abstraction</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </section>
+
         <section data-background-color="#464342" data-background-transition="slide">
             <h3>Contact</h3>
             <div>
-                <img src="images/ich.jpg" class="plain" style="float: left; height: 300px; margin-right: 100px"/>
-                <div style="text-align: left; padding-left:100px !important; margin-left:100px !important;">
-                    <small>  Bernhard Kern</small>
+                <img src="images/ich.jpg" class="plain"
+                     style="float: left; margin-left:200px !important; height: 300px; margin-right: 100px"/>
+                <div style="text-align: left; padding-left:420px !important; margin-left:100px !important;">
+                    <small>Bernhard Kern</small>
                     <br/>
-                    <small>  it-economics GmbH</small>
+                    <small>it-economics GmbH</small>
                     <br/>
-                    <small>  phone: 0151 40605032</small>
+                    <small>phone: 0151 40605032</small>
                     <br/>
-                    <small>  xing: <a href="https://www.xing.com/profile/Bernhard_Kern9">BernhardKern9</a></small>
+                    <small>xing: <a href="https://www.xing.com/profile/Bernhard_Kern9">BernhardKern9</a></small>
                     <br/>
-                    <small>  twitter: <a href="http://twitter.com/BernhardKern">@BernhardKern</a></small>
+                    <small>twitter: <a href="http://twitter.com/BernhardKern">@BernhardKern</a></small>
                     <br/>
-                    <small>  mail: <a href="mailto:bkern@it-economics.de">bkern@it-economics.de</a></small>
+                    <small>mail: <a href="mailto:bkern@it-economics.de">bkern@it-economics.de</a></small>
                 </div>
             </div>
         </section>
