@@ -6,8 +6,8 @@
 
     <title>Clean Code</title>
 
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="Clean Code Presentation: Level Orange">
+    <meta name="author" content="Ilia Barancic">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,9 +19,8 @@
     <link rel="stylesheet" href="css/theme/slides.css" id="slides">
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
-    <!-- <link rel="stylesheet" href="lib/css/monokai-sublime.css"> -->
-
+    <!--<link rel="stylesheet" href="lib/css/zenburn.css">-->
+    <link rel="stylesheet" href="lib/css/monokai-sublime.css">
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement('link');
@@ -53,23 +52,23 @@
         </section>
 
         <section>
-            <p>Was bisher im <a style="color: red">roten Grad</a> geschah</p>
-            <!--<img src="https://s-media-cache-ak0.pinimg.com/736x/9a/52/4a/9a524a05224aa0f3d15a28f6bcf237cb.jpg"/>-->
-            <img src="http://pmsa-gojuryu.com/goju/mediapages/RedBelts/linked/karate%20013.jpg" width="40%"/>
-            <p>
-                <small>Kurzer Rückblick.</small>
-            </p>
+            <h3>Was wir im <a style="color: #ff7672">roten Grad</a> gelernt haben</h3>
+            <div class="fragment fade-right">
+                <img src="images/karate_red.jpg"/>
+                <!--<img src="http://pmsa-gojuryu.com/goju/mediapages/RedBelts/linked/karate%20013.jpg" width="40%"/>-->
+                <p>
+                    Kurzer Rückblick
+                </p>
+            </div>
         </section>
 
 
-        <section>
-            <div>
-                <h2>
+        <section data-background-transition="zoom" data-background-color="#ff7672">
+            <div style="color: white">
+                <h2 data-background-color="#FFFFFF">
                     <mark>Prinzipien vs. Praktiken</mark>
                 </h2>
                 <table>
-                    <thead class="fragment" data-fragment-index="0" data-background-color="">
-                    </thead>
                     <tr>
                         <td class="fragment" data-fragment-index="1">Don‘t Repeat Yourself (DRY)</td>
                         <td class="fragment" data-fragment-index="6">Die Pfadfinderregel beachten</td>
@@ -100,580 +99,43 @@
         </section>
 
 
-        <section>
-            <h3>Integration Operation Segregation
-                <mark>What?</mark>
-            </h3>
+        <section data-background-color="#ff7672">
+            <section>
+                <h3 style="color: white">Integration Operation Segregation
+                    <mark>What?</mark>
+                </h3>
+                <div>
+                    <img class="fragment fade-up" src="images/what.jpg" style="margin:5px"/>
+                    <blockquote class="fragment" style="color: white;float: left;text-align: left">Subroutines are
+                        either integrations
+                        or operations.<br>
+                        <mark>Operations</mark>
+                        contain logic, integrations not. <br>
+                        <mark>Integration</mark>
+                        means aggregating operations and otherintegrations into a larger whole.
+                    </blockquote>
 
-            <img class="fragment fade-up" src="https://ih0.redbubble.net/image.218547668.2032/ap,550x550,16x12,1,transparent,t.png"
-                 style="float:right"/>
-
-                <div class="quote emph fragment">Subroutines are either integrations or operations.
-                    Operations contain logic, integrations not. Integration means aggregating operations and other
-                    integrations into a larger whole.
-            </div>
-
-        </section>
-
-        <section>
-            <h3>What is Clean Code -
-                <mark>&nbsp;Micheal Feathers&nbsp;</mark>
-            </h3>
-
-            <img alt="bob" src="images/michalfeathers.png" class="plain"
-                 style="float:right"/>
-            <div class="quote-parent">
-                <div class="quote emph">“ Clean code always
-                    looks like it was written
-                    by
-                    <mark>&nbsp;someone who cares&nbsp;</mark>
-                    ”
                 </div>
-            </div>
-        </section>
+            </section>
+            <section>
+                <h3 style="color: white">Integration Operation Segregation
+                    Principle
+                </h3>
 
-        <section data-background-color="#353550" data-background-transition="slide">
-            <h2>Why Clean Code?</h2>
-        </section>
-
-        <section data-background-color="#353550">
-            <h3>Why clean code -
-                <mark>&nbsp; Uncle Bob&nbsp;</mark>
-            </h3>
-
-            <img alt="bob" src="images/unclebob.png" class="plain"
-                 style="float:right"/>
-            <div class="quote-parent">
-                <div class="quote emph">“ Indeed, the ratio of time spent
-                    <mark>&nbsp;reading versus writing&nbsp;</mark>
-                    is well over
-                    <mark>&nbsp;10 to
-                        1&nbsp;
-                    </mark>
-                    .
-                    We
-                    are
-                    constantly reading old code as part of the effort to write new code ”
-                </div>
-            </div>
-        </section>
-
-        <section data-background-color="#353550">
-            <h3>Why clean code -
-                <mark>&nbsp;Developers Perspective&nbsp;</mark>
-            </h3>
-            <ol>
-                <li class="fragment">You are a developer</li>
-                <li class="fragment">You want to get a
-                    <mark>&nbsp;better developer&nbsp;</mark>
-                </li>
-                <li class="fragment">(Other minor reasons)
-                    <ul>
-                        <li>Produce tested,
-                            <mark>&nbsp;running&nbsp;</mark>
-                            , maintainable code
-                        </li>
-                        <li>Be important to your employer or customer</li>
-                        <li>
-                            <mark>&nbsp;Choose your employer&nbsp;</mark>
-                            or customer
-                        </li>
-                        <li>Change architecture: Bottom up</li>
-                    </ul>
-                </li>
-            </ol>
-        </section>
-
-        <section data-background-color="#353550">
-            <h3>Why clean code -
-                <mark>&nbsp; Employers Perspective&nbsp;</mark>
-            </h3>
-            <ol>
-                <li class="fragment">It is (almost) free</li>
-                <li class="fragment">It is a key
-                    <mark>&nbsp;success factor&nbsp;</mark>
-                    to your software projects
-                </li>
-                <li class="fragment">
-                    <mark>&nbsp;Reduces technical debt&nbsp;</mark>
-                    without costs
-                </li>
-                <li class="fragment">Attract better and
-                    <mark>&nbsp;passionate developers&nbsp;</mark>
-                </li>
-            </ol>
-        </section>
-
-        <section data-background-color="#353550">
-            <h3>Why clean code -
-                <mark>&nbsp;Bug fix costs&nbsp;</mark>
-            </h3>
-            <img src="images/bugfix%20costs.jpg" class="plain" height="500"/>
-        </section>
-
-        <section data-background-color="#353550">
-            <h3>How can I learn Clean Code?
-            </h3>
-            <p>
-                <img alt="bob" src="images/cleancode_bookcover.jpg" height="500"/>
-                <img alt="bob" src="images/thesoftwarecraftsman_bookcover.jpg" height="500"/>
-            </p>
-            <p>
-                <small><a href="http://www.cleancodedeveloper.de">www.cleancodedeveloper.de</a> - Sorry guys, just
-                    german
-                </small>
-            </p>
-        </section>
-
-        <section data-background-color="#353550">
-            <h3>
-                <mark>&nbsp;CCD Intiative&nbsp;</mark>
-                is splitted into:
-            </h3>
-            <ol>
-                <li class="fragment">Pricinples</li>
-                <li class="fragment">Practices</li>
-            </ol>
-        </section>
-
-        <section data-background-color="#2D3F4F" data-background-transition="slide">
-            <h3>Clean Code
-                <mark>&nbsp;Practices&nbsp;</mark>
-                - some examples
-            </h3>
-            <ul>
-                <li class="fragment">Boyscout rule - leave it cleaner as it was before</li>
-                <li class="fragment">Visit Meetups and Fares</li>
-                <li class="fragment">Pair Programming</li>
-                <li class="fragment">Use refactoring patterns</li>
-                <li class="fragment">Reflect Daily</li>
-                <li class="fragment">Write automated tests</li>
-            </ul>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <h3>Lets start with some
-                <mark>&nbsp;advices&nbsp;</mark>
-                and
-                <mark>&nbsp;principles&nbsp;</mark>
-            </h3>
-            <ul style="list-style: none">
-                <li>
-                    <small>advices: tipps from the book or me</small>
-                </li>
-                <li>
-                    <small>principles: from CCD (which is derived from the book)</small>
-                </li>
-            </ul>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <h3>Principles -
-                <mark>&nbsp;KISS&nbsp;</mark>
-                and
-                <mark>&nbsp;YAGNI&nbsp;</mark>
-            </h3>
-            <p>
-                <small>
-                    <mark>&nbsp;KISS&nbsp;</mark>
-                    : Keep it simple and stupid
-                </small>
-                <br/>
-                <small>
-                    <mark>&nbsp;YAGNI&nbsp;</mark>
-                    : You ain´t gonna need it
-                </small>
-            </p>
-            <ul>
-                <li class="fragment">Be careful: Developer: "We write that, just in case we need it"</li>
-                <li class="fragment">Be careful: Developer: "We will need this in future"</li>
-                <li class="fragment">Be careful: Product owner: "In future, this will happen"</li>
-            </ul>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <div>
-                <h4>Advice -
-                    <mark>&nbsp;Meaningful names&nbsp;</mark>
-                </h4>
                 <pre><code data-noescape class="java">
-    public List<int[]> getThem() {
-    List<int[]> list1 = new ArrayList<int[]>();
-        for (int[] x : theList)
-        if (x[0] == 4)
-            list1.add(x);
-        return list1;
-    }
-                </code></pre>
-            </div>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <div>
-                <h4>Advice -
-                    <mark>&nbsp;Meaningful names&nbsp;</mark>
-                </h4>
-                <pre class="fragment"><code data-noescape class="java">
-    public List&lt;Cell&gt; getFlaggedCells() {
-    List&lt;Cell&gt; flaggedCells = new ArrayList<Cell>();
-        for (Cell cell : gameBoard)
-            if (cell.isFlagged())
-                flaggedCells.add(cell);
-        return flaggedCells;
-    }
-                </code></pre>
-            </div>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <div>
-                <h4>Advice -
-                    <mark>&nbsp;Meaningful names - Shorter&nbsp;</mark>
-                </h4>
-                <pre class="fragment" style="width:1050px"><code style="width:1050px" data-noescape class="java">
-    public List&lt;Cell&gt; getFlaggedCells() {
-       return board.getCells().stream().filter(Cell::isFlagged).collect(toList());
-    }
-                </code></pre>
-            </div>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <div>
-                <h4>Priciniple of
-                    <mark>&nbsp;Least astonishment&nbsp;</mark>
-                </h4>
-                <pre class="fragment" style="width:1050px"><code style="width:1050px" data-noescape class="java">
-        public String getDeviceName() {
-            if(name.equals("Jessica Jones"))  {
-                setName("Lucas Cage"); //WTF
-                callDatabase(name); //WTF
-            }
-            return name;
+       public void process(MyData data) {
+        if (validate(data)) {
+            dataDao.save(data);
+        } else {
+            throw new RuntimeException("Error");
         }
-                </code></pre>
-            </div>
+    }</code>
+                </pre>
+                <pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
+
+            </section>
         </section>
 
-        <section data-background-color="#2D3F4F">
-            <div>
-                <h4>Advice -
-                    <mark>&nbsp;Avoid noise comments&nbsp;</mark>
-                </h4>
-                <pre class="fragment"><code data-noescape class="java">
-    /** The day of the month. */
-    private int dayOfMonth;
-    /**
-     * Returns the day of the month.
-     * @return the day of the month.
-     */
-    public int getDayOfMonth() {
-        return dayOfMonth;
-    }
-                </code></pre>
-            </div>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <div>
-                <h4>Advice -
-                    <mark>&nbsp;Avoid scary noise&nbsp;</mark>
-                </h4>
-                <pre class="fragment"><code data-noescape class="java">
-    /**
-     * The name.
-     */
-    private String name;
-    /**
-     * The version.
-     */
-    private String version;
-    /**
-     * The licenceName.
-     */
-    private String licenceName;
-                </code></pre>
-            </div>
-        </section>
-
-
-        <section data-background-color="#2D3F4F">
-            <div>
-                <h4>Principle -
-                    <mark>&nbsp;DRY&nbsp;</mark>
-                </h4>
-                <small class="fragment">
-                    <mark>&nbsp;DRY - Don´t repeat yourself&nbsp;</mark>
-                    is the oposite of
-                    <mark>&nbsp;WET&nbsp;</mark>
-                    priciple
-                </small>
-                <pre class="fragment"><code data-noescape class="java">
-    private List&lt;Person&gt; createCdsTeam() {
-        List&lt;Person&gt; cdsTeam = new ArrayList<>();
-
-        Person timo = new Person();
-        timo.setFirstName("Timo");
-        timo.setLastName("Krauss");
-        cdsTeam.add(timo);
-
-        Person yunus = new Person();
-        yunus.setFirstName("Yunus");
-        yunus.setLastName("Durmus");
-        cdsTeam.add(yunus);
-
-        return cdsTeam;
-    }
-                </code></pre>
-            </div>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <div>
-                <h4>Principle -
-                    <mark>&nbsp;DRY&nbsp;</mark>
-                </h4>
-                <pre class="fragment"><code data-noescape class="java">
-    private List&lt;Person&gt; createCDS() {
-        List&lt;Person&gt; cdsTeam = new ArrayList<>();
-
-        cdsTeam.add(createPerson("Vanessa", "Krapp"));
-        cdsTeam.add(createPerson("Timo", "Krauss"));
-        cdsTeam.add(createPerson("Yunus", "Durmus"));
-        cdsTeam.add(createPerson("Stephan", "Kämper"));
-        cdsTeam.add(createPerson("Bernhard", "Kern"));
-
-        return cds;
-    }
-                </code></pre>
-            </div>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <div>
-                <h4>Advice -
-                    <mark>&nbsp;Write short classes and functions&nbsp;</mark>
-                </h4>
-                <ul style="list-style: none">
-                    <li class="fragment">
-                        <mark>&nbsp;Classes&nbsp;</mark>
-                        : <= 100 lines
-                    </li>
-                    <li class="fragment">
-                        <mark>&nbsp;Methods&nbsp;</mark>
-                        : <= 5 lines
-                    </li>
-                </ul>
-                <small class="fragment">(OK,ok there are some exceptions: e.g adding stuff to a map or doing always the
-                    same thing)
-                </small>
-            </div>
-        </section>
-        <section data-background-color="#2D3F4F">
-            <div>
-                <h4>Advice -
-                    <mark>&nbsp;The best function has no parameters&nbsp;</mark>
-                </h4>
-                <ul style="list-style: none">
-                    <li class="fragment">
-                        Number of function parameters: <= 3
-                    </li>
-                    <li class="fragment">
-                        Best number of function parameters: = 0
-                    </li>
-                </ul>
-                <pre class="fragment"><code data-noescape class="java">
-    List&lt;ReadingEntity&gt; findAggregateByOwnerAndDeviceAndTime(
-        String database,
-        String measurement,
-        String field,
-        String owner,
-        String device,
-        String reading,
-        long start,
-        long stop,
-        long interval,
-        DurationUnitType intervalUnit,
-        FunctionType function,
-        String shift,
-        String fill);
-                </code></pre>
-            </div>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <div>
-                <h4>Advice - Function
-                    <mark>&nbsp;The best function has no parameters&nbsp;</mark>
-                </h4>
-                <pre class="fragment"><code data-noescape class="java">
-    List&lt;ReadingEntity&gt; findReadings(
-                    Interval interval,
-                    ReadingQueryParameter queryParameter);
-                </code></pre>
-                <div style="width:1050px;text-align: left !important;">
-                    <small class="fragment">
-                        <mark>&nbsp;Additional TIPP:&nbsp;</mark>
-                        : Use common verbs to name functions: get, find, delete/remove, put, save
-                    </small>
-                    <small class="fragment">
-                        <mark>&nbsp;Additional TIPP:&nbsp;</mark>
-                        : Parameters are part of method signature. saveReading(Reading) is duplicate
-                    </small>
-                    <small class="fragment">
-                        <mark>&nbsp;Additional TIPP:&nbsp;</mark>
-                        : a non void function should never touch its parameters
-                    </small>
-                </div>
-            </div>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <div>
-                <h4>Principle -
-                    <mark>&nbsp;SRP&nbsp;</mark>
-                </h4>
-                <small class="fragment">
-                    <mark>&nbsp;SRP&nbsp;</mark>
-                    = Single Resposibility Priciple / (Do one thing, but do it well)
-                </small>
-
-                <pre class="fragment"><code data-noescape class="java">
-   class Book {
-
-        public String getTitle() {
-            return "A Great Book";
-        }
-
-         public void saveBook(BookRepository repository) {
-            repository.save(this);
-         }
-    }
-                </code></pre>
-                <small class="fragment">
-                    <mark>&nbsp;TIPP:&nbsp;</mark>
-                    When you have problems finding a name for a class or method: Got perhaps a problem with SRP
-                </small>
-            </div>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <mark>&nbsp;SLA&nbsp;</mark>
-            - Single level of abstraction
-            <pre class="fragment"><code data-noescape class="java">
-    if(## check something here) {               // Level 1
-        Person stephan = new Person();          // Level 2
-        stephan.setFirstName("Stephan");        // Level 2
-        stephan.setLastname("Kämper");          // Level 2
-        person = stephan;
-    } else {                                    // Level 1
-        Person bernhard = new Person();         // Level 2
-        bernhard.setFirstName("Bernhard");      // Level 2
-        bernhard.setLastname("Kern");           // Level 2
-        person = bernhard;
-    }
-                </code></pre>
-            <p>
-                <small class="fragment">
-                    <mark>&nbsp;TIPP:&nbsp;</mark>
-                    Use methods or relations to services to jump between abstraction Levels
-                </small>
-                <small class="fragment">
-                    <mark>&nbsp;TIPP:&nbsp;</mark>
-                    With "extract method" or "extract class" refactoring you can easily solve SLA problems
-                </small>
-            </p>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-            <h4>Principle -
-                <mark>&nbsp;SLA&nbsp;</mark>
-                - Single level of abstraction
-            </h4>
-            <pre class="fragment" style="width:1000px"><code style="width:1000px" data-noescape class="java">
-    // contains duplication
-    if(## check something here) {                   // conditional level
-        person = createPerson("Stephan", "Kämper"); // -> do something
-    } else {                                        // conditional level
-        person = createPerson("Bernhard", "Kern");  // -> do something
-    }
-                </code></pre>
-
-            <pre class="fragment" style="width:1000px"><code style="width:1000px" data-noescape class="java">
-    // version with DRY and SLA combined - no duplication, but is it really nicer?
-    if(## check something here) {
-        firstName = "Stephan";
-        lastName = "Kämper";
-    } else {
-        firstName = "Bernhard";
-        lastName = "Kern";
-    }
-    person = createPerson(firstName, lastName);
-                </code></pre>
-        </section>
-
-        <section data-background-color="#2D3F4F">
-
-            <h3>Summary</h3>
-
-            <ul>
-                <li class="fragment">Not tested code is
-                    <mark>&nbsp;legacy&nbsp;</mark>
-                </li>
-                <li class="fragment">
-                    <mark>&nbsp;Deleting code&nbsp;</mark>
-                    is positive
-                </li>
-                <li class="fragment">Commenting code is 90% unncessary</li>
-                <li class="fragment">Share
-                    <mark>&nbsp;coding conventions&nbsp;</mark>
-                    in your team
-                </li>
-                <li class="fragment">Know shortcuts of
-                    <mark>&nbsp;Refactorings&nbsp;</mark>
-                    (Extract method, parameter, variable)
-                </li>
-                <li class="fragment">Know your
-                    <mark>&nbsp;language and tools&nbsp;</mark>
-                    - Java 8 features, IDE shortcuts
-                </li>
-                <li class="fragment">Some
-                    <mark>&nbsp;Principles and Practices&nbsp;</mark>
-                    <ul>
-                        <li>Boyscout rule - Leave the code cleaner as you found it before</li>
-                        <li>KISS and YAGNI - Keep it simple/stupid, You ain´t gonna need it</li>
-                        <li>DRY - Don´t repeat yourself (Some exceptions)</li>
-                        <li>SRP - Single resposibility priciple</li>
-                        <li>SLA - Single level of abstraction</li>
-                    </ul>
-                </li>
-
-            </ul>
-        </section>
-
-        <section data-background-color="#464342" data-background-transition="slide">
-            <h3>Contact</h3>
-            <div>
-                <img src="images/ich.jpg" class="plain"
-                     style="float: left; margin-left:200px !important; height: 300px; margin-right: 100px"/>
-                <div style="text-align: left; padding-left:420px !important; margin-left:100px !important;">
-                    <small>Bernhard Kern</small>
-                    <br/>
-                    <small>it-economics GmbH</small>
-                    <br/>
-                    <small>phone: 0151 40605032</small>
-                    <br/>
-                    <small>xing: <a href="https://www.xing.com/profile/Bernhard_Kern9">BernhardKern9</a></small>
-                    <br/>
-                    <small>twitter: <a href="http://twitter.com/BernhardKern">@BernhardKern</a></small>
-                    <br/>
-                    <small>mail: <a href="mailto:bkern@it-economics.de">bkern@it-economics.de</a></small>
-                </div>
-            </div>
-        </section>
-
-        <section><a href="https://gitlab.com/privaterepos/clean-code-presentation">https://gitlab.com/privaterepos/clean-code-presentation</a>
-        </section>
     </div>
 
 </div>

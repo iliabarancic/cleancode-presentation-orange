@@ -117,6 +117,28 @@ public class Example {
         return cds;
     }
 
+    MyDataDao dataDao = new MyDataDao();
+    public void process(MyData data) {
+        if (validate(data)) {
+            dataDao.save(data);
+        } else {
+            throw new RuntimeException("Error");
+        }
+    }
+
+    private class MyDataDao{
+        void save(MyData data) {
+
+        }
+    }
+
+    private void save(MyData data) {
+
+    }
+
+    private boolean validate(MyData data) {
+        return false;
+    }
 
 
 }
