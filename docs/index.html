@@ -43,7 +43,7 @@
     <div class="slides">
         <section>
             <h1>Clean Code Initiative</h1>
-            <h2 style="color: #e5b11b">Orangener Grad</h2>
+            <h2 style="color: #f1911d">Orangener Grad</h2>
             <h7>Düsseldorf, 23.06.2017</h7>
             <p>
                 <small>Created by <a href="https://www.xing.com/profile/Ilia_Barancic">Ilia Barancic</a>
@@ -112,9 +112,41 @@
                         <mark>Operations</mark>
                         contain logic, integrations not. <br>
                         <mark>Integration</mark>
-                        means aggregating operations and otherintegrations into a larger whole.
+                        means aggregating operations and other integrations into a larger whole.
                     </blockquote>
 
+                </div>
+            </section>
+            <section>
+                <h3 style="color: white">Integration Operation Segregation Principle
+                    auf Deutsch
+                </h3>
+                <div>
+                    <img src="images/german.jpg" style="float: right"/>
+                    <ul>
+                        <li style="background-color: #00AAAA" class="fragment"><b>Operationen:</b>
+                            Kontrollstrukturen und
+                            Fremd-API-Aufrufe
+                        </li>
+                        <ul style="background-color: #00AAAA" class="fragment">
+                            <li>aber keine Aufrufe der
+                                eigenen Codebasis
+                            </li>
+                        </ul>
+                        <li style="background-color: #00AAAA" class="fragment"><b>Integrationen:</b> nur Aufrufe
+                            anderer Methoden dieser
+                            Codebasis</br>oder:
+                        </li>
+
+                        <li style="background-color: #00AAAA" class="fragment">Aufrufer einer Methode
+                            verarbeitet nie selbst einen
+                            Rückgabewert
+                        </li>
+                    </ul>
+
+                    <small style="margin-top: 20%">
+                        Quelle:http://www.inf.fu-berlin.de/inst/ag-se/teaching/K-CCD-2016/02_Roter-Grad.pdf
+                    </small>
                 </div>
             </section>
             <section>
@@ -131,11 +163,31 @@
         }
     }</code>
                 </pre>
-                <pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-
+            </section>
+        </section>
+        <section data-background-color="#ff7672">
+            <section>
+                <h3 style="color: white">Favour Composition over Inheritance
+                </h3>
+                <div>
+                    <img class="fragment fade-right" src="images/captainamerica.jpg" style="float: inherit"/>
+                    <img class="fragment fade-left" src="images/ironman.jpg" style="float: inherit"/>
+                </div>
+            </section>
+            <section data-background-color="#ff7672" data-background-image="images/liskov.png"
+                     data-background-size="800px"></section>
+            <section>
+                <h3 style="color: white">Favour Composition over Inheritance</h3>
+                <div>
+                    <img src="images/ilia.png" style="float: right"/>
+                    <p style="color: white">Ilia's <mark>Pro-Tipp</mark> (geklaut auf Stackoverflow)</p>
+                    <h6 class="fragment" style="margin-top: 10%">Lombok Annotation: <mark>@Delegate</mark></h6>
+                </div>
             </section>
         </section>
 
+        <section data-background-transition="zoom" data-background-color="#F1911D">
+        </section>
     </div>
 
 </div>
@@ -154,7 +206,7 @@
         center: true,
         slideNumber: true,
 
-        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
         // More info https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
