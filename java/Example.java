@@ -117,7 +117,24 @@ public class Example {
         return cds;
     }
 
+    public List<ResultDto> buildResult(Set<ResultEntity> resultSet) {
+        List<ResultDto> result = new ArrayList<>();
+        for (ResultEntity entity : resultSet) {
+            result.add(toDto(entity));
+        }
+        return result;
+    }
+
+    private ResultDto toDto(ResultEntity entity) {
+        ResultDto dto = new ResultDto();
+        dto.setShoeSize(entity.getShoeSize());
+        dto.setNumberOfEarthWorms(entity.getNumberOfEarthWorms());
+        dto.setAge(computeAge(entity.getBirthday()));
+        return dto;
+    }
+
     MyDataDao dataDao = new MyDataDao();
+
     public void process(MyData data) {
         if (validate(data)) {
             dataDao.save(data);
@@ -126,7 +143,7 @@ public class Example {
         }
     }
 
-    private class MyDataDao{
+    private class MyDataDao {
         void save(MyData data) {
 
         }

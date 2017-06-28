@@ -55,7 +55,6 @@
             <h3>Was wir im <a style="color: #ff7672">roten Grad</a> gelernt haben</h3>
             <div class="fragment fade-right">
                 <img src="images/karate_red.jpg"/>
-                <!--<img src="http://pmsa-gojuryu.com/goju/mediapages/RedBelts/linked/karate%20013.jpg" width="40%"/>-->
                 <p>
                     Kurzer Rückblick
                 </p>
@@ -119,7 +118,6 @@
             </section>
             <section>
                 <h3 style="color: white">Integration Operation Segregation Principle
-                    auf Deutsch
                 </h3>
                 <div>
                     <img src="images/german.jpg" style="float: right"/>
@@ -154,7 +152,7 @@
                     Principle
                 </h3>
 
-                <pre><code data-noescape class="java">
+                <pre style="box-shadow: none"><code data-noescape class="java">
        public void process(MyData data) {
         if (validate(data)) {
             dataDao.save(data);
@@ -180,13 +178,86 @@
                 <h3 style="color: white">Favour Composition over Inheritance</h3>
                 <div>
                     <img src="images/ilia.png" style="float: right"/>
-                    <p style="color: white">Ilia's <mark>Pro-Tipp</mark> (geklaut auf Stackoverflow)</p>
-                    <h6 class="fragment" style="margin-top: 10%">Lombok Annotation: <mark>@Delegate</mark></h6>
+                    <p style="color: white">Ilia's
+                        <mark>Pro-Tipp</mark>
+                    </p>
+                    <h6 class="fragment" style="margin-top: 10%">Lombok Annotation:
+                        <mark>@Delegate</mark>
+                    </h6>
                 </div>
             </section>
         </section>
 
         <section data-background-transition="zoom" data-background-color="#F1911D">
+            <section>
+                <h2 style="color:white">Single Level of Abstraction (SLA)</h2>
+                <div>
+                    <ul class="emph fragment">
+                        <li class="fragment">Innerhalb einer Methode soll nur ein Abstraktionsniveau verwendet werden
+                        </li>
+                        <li class="fragment">Niedrigere Niveaus in eigene Methoden auslagern</li>
+                        <li class="fragment">Fördert Lesbarkeit einer Methode</li>
+                    </ul>
+                    <img class="fragment" src="images/newspaper.jpg" style="float: right"/>
+                </div>
+            </section>
+            <section>
+                <h2 style="color:white">Single Level of Abstraction (SLA)</h2>
+                <pre style="box-shadow: none"><code data-noescape class="java">
+   public List<ResultDto> buildResult(Set<ResultEntity> resultSet) {
+    List<ResultDto> result = new ArrayList<>();
+    for (ResultEntity entity : resultSet) {
+        ResultDto dto = new ResultDto();
+        dto.setShoeSize(entity.getShoeSize());
+        dto.setNumberOfEarthWorms(entity.getNumberOfEarthWorms());
+
+        //Compute age
+        Date bDay = entity.getBirthday();
+        int age = new Date()-bDay;
+        dto.setAge(age);
+        result.add(dto);
+    }
+    return result;
+}
+                                 }
+                         </code>
+                </pre>
+                <mark class="fragment">Indiz#1: Loop-Bodies sind sehr groß</mark>
+                <p>
+                    <mark class="fragment">Indiz#2: Leerzeile und/oder Kommentar</mark>
+                </p>
+            </section>
+            <section>
+                <h2 style="color:white">Single Level of Abstraction (SLA)</h2>
+                <div>
+                    <pre style="box-shadow: none;"><code data-noescape class="java" style="max-height: none">
+    public List<ResultDto> buildResult(Set<ResultEntity> resultSet) {
+        List<ResultDto> result = new ArrayList<>();
+        for (ResultEntity entity : resultSet) {
+            result.add(toDto(entity));
+        }
+        return result;
+    }
+
+    private ResultDto toDto(ResultEntity entity) {
+        ResultDto dto = new ResultDto();
+        dto.setShoeSize(entity.getShoeSize());
+        dto.setNumberOfEarthWorms(entity.getNumberOfEarthWorms());
+        dto.setAge(computeAge(entity.getBirthday());
+        return dto;
+    }
+
+                </code>
+                </pre>
+                </div>
+            </section>
+        </section>
+
+        <section data-background-color="#F1911D">
+            <section>
+                <h2 style="color:white">Single Responsibility Principle (SRP)</h2>
+                <img class="fragment" src="images/srpmeme.jpg">
+            </section>
         </section>
     </div>
 
