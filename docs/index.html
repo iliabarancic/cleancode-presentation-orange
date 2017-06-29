@@ -258,6 +258,144 @@
                 <h2 style="color:white">Single Responsibility Principle (SRP)</h2>
                 <img class="fragment" src="images/srpmeme.jpg">
             </section>
+            <section>
+                <h2 style="color:white">Single Responsibility Principle (SRP)</h2>
+                <blockquote>
+                    "A class should have only one reason to change."<br>
+                    Robert C. Martin
+                </blockquote>
+            </section>
+            <section>
+                <h2 style="color:white">Single Responsibility Principle (SRP)</h2>
+                <h6 style="color: white">Indizien für SRP</h6>
+                <div>
+                    <ul>
+                        <li class="fragment">
+                            <mark>Änderungen an einer Stelle im Code ziehen Änderungen an anderen Stellen an sich</mark>
+                        </li>
+                        <li class="fragment">
+                            <mark>Eine Klasse darf zu viel</mark>
+                        </li>
+                        <li class="fragment">
+                            <mark>Domainlogik konzentriert sich in einer Klasse</mark>
+                        </li>
+                        <li class="fragment">
+                            <mark>Die Klasse lässt sich nur schlecht herauslösen/wiederverwenden</mark>
+                        </li>
+                        <li style="list-style:none;">&nbsp;</li>
+                        <li class="fragment">
+                            <mark>Aber: vorsicht vor Ravioli-Code</mark>
+                        </li>
+                    </ul>
+                    <img class="fragment" src="images/ravioli.jpg" style=" float: right;max-height: 50%"/>
+                </div>
+            </section>
+        </section>
+
+        <section data-background-color="#F1911D">
+            <section>
+                <h2 style="color: white">Separation of Concerns (SoC)</h2>
+                <h6 class="fragment" style="color: white">was haben die beiden gemeinsam?</h6>
+                <div class="fragment">
+                <img src="images/rooms.jpg" />&nbsp;&nbsp;&nbsp;<img src="images/stove.jpg" style="max-height: 70%"/>
+                </div>
+            </section>
+            <section>
+                <h2 style="color: white">Separation of Concerns (SoC)</h2>
+                <h6 style="color: white">Beispiele</h6>
+                <ul>
+                    <li class="fragment">
+                        <mark>MVC-Pattern</mark>
+                    </li>
+                    <li class="fragment">
+                        <mark>Logging, Caching, Transaktionalität</mark>
+                    </li>
+                    <li class="fragment">
+                        <mark>Microservices</mark>
+                    </li>
+                    <li class="fragment">
+                        <mark>HTML+CSS</mark>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section data-background-color="#F1911D">
+            <section>
+                <h2 style="color: white">Source Code Conventionen</h2>
+                <div class="fragment">
+                          <pre style="box-shadow: none;">
+                              <code data-noescape class="java" style="max-height: none">
+
+/*
+ * setze Namen
+ */
+ public void setName(final String name) {
+     this._name = name;
+ }
+
+  /**
+  * Returns the day of the month.
+  *
+  * @return the day of the month.
+  */
+ public int getDayOfMonth() {
+     return dayOfMonth;
+ }
+                </code>
+                </pre>
+
+                </div>
+            </section>
+            <section>
+                <h2 style="color: white">Source Code Conventionen</h2>
+                <div><pre style="box-shadow: none;">
+                    <code data-noescape class="java fragment">
+@Test
+public void testSystemMethod_twoLevelInput_expectThreelevelOutput(){}</code>
+                              <code data-noescape class="java fragment">public class CustomerDataFormatter {
+    public void formatCustomerData(CustomerData data){}
+}</code>
+                </pre>
+
+                </div>
+            </section>
+            <section>
+                <h2 style="color: white">Source Code Conventionen</h2>
+                <div><pre style="box-shadow: none;">
+                    <code data-noescape class="java fragment">
+//Check if employee is eligibale for full benefits
+if (employee.age>65 && employee.flag)</code>
+                              <code data-noescape class="java fragment">employee.isEligibleForFullBenefits()</code>
+                    <code data-noescape class="java fragment">
+//variables
+
+//public methods
+
+//helper methods
+                    </code>
+                </pre>
+
+                </div>
+            </section>
+            <section>
+                <h2 style="color: white">Source Code Conventionen</h2>
+                <div><pre style="box-shadow: none;">
+                    <code data-noescape class="java fragment">
+/**
+ * Implementierung eines WeakAction Listeners nach der Anleitung aus: http:..
+ * Siehe auch das Buch "Weak Listeners for Dummys" s.12ff
+ */
+public class WeakActionListener</code>
+<code data-noescape class="java fragment">//SimpleDateFormat is not threadsafe so we need to create it independently
+SimpleDateFormat sdf = new SimpleDateFormat();</code>
+<code data-noescape class="java fragment">
+//TODO: entfernen sobal Digital auf die neue Schnittstelle umsteigt
+long pegasusId = pegasusId == null ? contractpositionId : pegasusId;
+                    </code>
+                </pre>
+
+                </div>
+            </section>
         </section>
     </div>
 
